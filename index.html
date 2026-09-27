@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karuna Creative | Digital Marketing Freelancer</title>
+
+    <meta name="description"
+          content="Karuna Creative helps local businesses grow online through digital marketing, social media management, graphic design, content creation and online advertising.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111111;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d8b4fe;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d8b4fe;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+            background: linear-gradient(135deg, #faf5ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #111111;
+        }
+
+        .hero h1 span {
+            color: #7c3aed;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #555555;
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .primary {
+            background: #111111;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #111111;
+            color: #111111;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 45px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #555555;
+            font-size: 17px;
+        }
+
+        .services {
+            background: #fafafa;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #7c3aed;
+        }
+
+        .service-card p {
+            color: #666666;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .step {
+            padding: 25px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #111111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto auto 15px;
+            font-weight: bold;
+        }
+
+        .portfolio {
+            background: #fafafa;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            min-height: 180px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            color: #4c1d95;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111111;
+            color: white;
+        }
+
+        .contact p {
+            color: #dddddd;
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #d8b4fe;
+            text-decoration: none;
+        }
+
+        .contact-buttons {
+            margin-top: 25px;
+        }
+
+        footer {
+            background: #000000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 850px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .service-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Karuna Creative</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <h1>
+            Grow Your Business.<br>
+            <span>Get Seen Online.</span>
+        </h1>
+
+        <p>
+            Hi, I'm Karuna — a digital marketing freelancer helping
+            local businesses build a stronger online presence through
+            creative design, social media and digital marketing.
+        </p>
+
+        <a href="#contact" class="btn primary">
+            Let's Work Together
+        </a>
+
+        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing%20for%20my%20business."
+           class="btn secondary"
+           target="_blank">
+            WhatsApp Me
+        </a>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I'm Karuna, a freelance digital marketer and creative designer
+            based in Tezpur, Assam.
+        </p>
+
+        <br>
+
+        <p>
+            I help local businesses improve their online presence through
+            social media management, content creation, graphic design,
+            online advertising and other digital marketing services.
+        </p>
+
+        <br>
+
+        <p>
+            My goal is to create simple, creative and useful digital
+            solutions that help businesses connect with more potential
+            customers online.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <h2 class="section-title">My Services</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <h3>Social Media Management</h3>
+            <p>
+                Social media planning, posting and account management
+                to maintain an active online presence.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Content Creation</h3>
+            <p>
+                Creative social media posts, captions, reels and
+                promotional content for your business.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Graphic Design</h3>
+            <p>
+                Professional posters, flyers, banners, business cards,
+                thumbnails and promotional designs.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Online Advertising</h3>
+            <p>
+                Digital advertising support to help businesses reach
+                relevant audiences online.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Website Design</h3>
+            <p>
+                Clean and responsive websites designed to present
+                your business professionally online.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Digital Marketing Strategy</h3>
+            <p>
+                Practical digital marketing ideas designed around
+                your business goals and target audience.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+    <h2 class="section-title">How I Work</h2>
+
+    <div class="process">
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Understand</h3>
+            <p>We discuss your business and goals.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Plan</h3>
+            <p>I create a suitable digital strategy.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Create</h3>
+            <p>I create your content and designs.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Grow</h3>
+            <p>We improve your online presence.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <h2 class="section-title">My Portfolio</h2>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+            Social Media Designs
+        </div>
+
+        <div class="portfolio-item">
+            Poster & Flyer Designs
+        </div>
+
+        <div class="portfolio-item">
+            Business Branding
+        </div>
+
+        <div class="portfolio-item">
+            Website Design
+        </div>
+
+        <div class="portfolio-item">
+            Digital Advertising
+        </div>
+
+        <div class="portfolio-item">
+            Content Creation
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Let's Work Together</h2>
+
+    <p>
+        Have a business and want to grow your online presence?
+    </p>
+
+    <p>
+        Let's discuss your requirements.
+    </p>
+
+    <p>
+        📍 Tezpur, Assam
+    </p>
+
+    <p>
+        📞
+        <a href="tel:+919101941783">
+            +91 91019 41783
+        </a>
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing%20for%20my%20business."
+           class="btn primary"
+           target="_blank">
+            Message Me on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Karuna Creative. All rights reserved.
+
+</footer>
+
+</body>
+</html>
