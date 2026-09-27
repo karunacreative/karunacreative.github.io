@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Karuna Creative | Digital Marketing Freelancer</title>
-
-    <meta name="description"
-          content="Karuna Creative helps local businesses grow online through digital marketing, social media management, graphic design, content creation and online advertising.">
-
+    <title>Karuna Creative | Digital Marketing & Design</title>
+    <meta name="description" content="Professional digital marketing, graphic design, and social media services for your business growth.">
     <style>
         * {
             margin: 0;
@@ -18,257 +14,417 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #ffffff;
-            color: #222222;
+            color: #333333;
             line-height: 1.6;
         }
 
+        /* HEADER */
         header {
-            background: #111111;
-            color: white;
-            padding: 18px 7%;
+            background: #ffffff;
+            padding: 20px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #d8b4fe;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0066cc;
         }
 
         nav a {
-            color: white;
+            color: #333333;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 35px;
             font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #d8b4fe;
+            color: #0066cc;
         }
 
+        /* HERO SECTION */
         .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 70px 7%;
-            background: linear-gradient(135deg, #faf5ff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 750px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+            padding: 120px 7%;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: 56px;
+            line-height: 1.2;
             color: #111111;
-        }
-
-        .hero h1 span {
-            color: #7c3aed;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 19px;
-            color: #555555;
-            margin-bottom: 30px;
-            max-width: 650px;
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 13px 24px;
-            border-radius: 30px;
+            padding: 15px 32px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .primary {
-            background: #111111;
+        .btn-primary {
+            background: #0066cc;
             color: white;
         }
 
-        .secondary {
-            border: 2px solid #111111;
-            color: #111111;
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,102,204,0.3);
         }
 
+        .btn-secondary {
+            background: transparent;
+            color: #0066cc;
+            border: 2px solid #0066cc;
+        }
+
+        .btn-secondary:hover {
+            background: #0066cc;
+            color: white;
+        }
+
+        /* SECTION STYLING */
         section {
-            padding: 80px 7%;
+            padding: 100px 7%;
         }
 
         .section-title {
+            font-size: 42px;
+            font-weight: 700;
             text-align: center;
-            font-size: 38px;
-            margin-bottom: 45px;
+            margin-bottom: 20px;
+            color: #111111;
         }
 
+        .section-subtitle {
+            text-align: center;
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ABOUT SECTION */
         .about {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            color: #555555;
-            font-size: 17px;
+            background: #f9fafb;
         }
 
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #111111;
+        }
+
+        .about-text p {
+            color: #666666;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e0f2ff, #f0f4ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0066cc;
+            font-size: 18px;
+        }
+
+        /* SERVICES SECTION */
         .services {
-            background: #fafafa;
+            background: #ffffff;
         }
 
-        .service-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-            transition: 0.3s;
+            background: #f9fafb;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-7px);
+            border-color: #0066cc;
+            box-shadow: 0 12px 40px rgba(0,102,204,0.15);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
 
         .service-card h3 {
-            margin-bottom: 12px;
-            color: #7c3aed;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #111111;
+            font-weight: 700;
         }
 
         .service-card p {
             color: #666666;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
-        .process {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            text-align: center;
-        }
-
-        .step {
-            padding: 25px;
-        }
-
-        .step-number {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #111111;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto auto 15px;
-            font-weight: bold;
-        }
-
+        /* PORTFOLIO SECTION */
         .portfolio {
-            background: #fafafa;
+            background: #f9fafb;
         }
 
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .portfolio-item {
-            min-height: 180px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+            background: linear-gradient(135deg, #e0f2ff, #f0f4ff);
+            min-height: 250px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
-            font-weight: bold;
-            color: #4c1d95;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0066cc;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .contact {
+        .portfolio-item:hover {
+            border-color: #0066cc;
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,102,204,0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            background: #ffffff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
             text-align: center;
-            background: #111111;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #0066cc;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
         }
 
-        .contact p {
-            color: #dddddd;
-            margin: 10px 0;
+        .process-step h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #111111;
+            font-weight: 700;
         }
 
-        .contact a {
-            color: #d8b4fe;
-            text-decoration: none;
-        }
-
-        .contact-buttons {
-            margin-top: 25px;
-        }
-
-        footer {
-            background: #000000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
+        .process-step p {
+            color: #666666;
             font-size: 14px;
         }
 
-        @media (max-width: 850px) {
+        /* CONTACT SECTION */
+        .contact {
+            background: #0066cc;
+            color: white;
+            text-align: center;
+        }
 
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
+        .contact .section-title {
+            color: white;
+        }
 
+        .contact .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-info {
+            margin: 40px 0;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
             nav a {
-                margin: 0 7px;
-                font-size: 13px;
+                margin-left: 20px;
+                font-size: 14px;
             }
 
             .hero h1 {
                 font-size: 42px;
             }
 
-            .service-grid,
+            .services-grid,
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
-            .process {
-                grid-template-columns: 1fr 1fr;
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            section {
+                padding: 60px 7%;
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
 
             .hero {
-                padding-top: 50px;
+                padding: 60px 7%;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
-            .process {
-                grid-template-columns: 1fr;
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
             }
 
             .section-title {
-                font-size: 30px;
+                font-size: 32px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 7%;
             }
         }
     </style>
@@ -276,9 +432,9 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo">Karuna Creative</div>
-
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -288,248 +444,142 @@
     </nav>
 </header>
 
-
-<!-- HOME -->
-
+<!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-content">
-
-        <h1>
-            Grow Your Business.<br>
-            <span>Get Seen Online.</span>
-        </h1>
-
-        <p>
-            Hi, I'm Karuna — a digital marketing freelancer helping
-            local businesses build a stronger online presence through
-            creative design, social media and digital marketing.
-        </p>
-
-        <a href="#contact" class="btn primary">
-            Let's Work Together
-        </a>
-
-        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing%20for%20my%20business."
-           class="btn secondary"
-           target="_blank">
-            WhatsApp Me
-        </a>
-
+    <h1>Grow Your Business Online</h1>
+    <p>Professional digital marketing, graphic design, and social media management to help your business succeed in the digital world.</p>
+    <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing." class="btn btn-secondary" target="_blank">Message on WhatsApp</a>
     </div>
 </section>
-
 
 <!-- ABOUT -->
-
-<section id="about">
-
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about">
-
-        <p>
-            I'm Karuna, a freelance digital marketer and creative designer
-            based in Tezpur, Assam.
-        </p>
-
-        <br>
-
-        <p>
-            I help local businesses improve their online presence through
-            social media management, content creation, graphic design,
-            online advertising and other digital marketing services.
-        </p>
-
-        <br>
-
-        <p>
-            My goal is to create simple, creative and useful digital
-            solutions that help businesses connect with more potential
-            customers online.
-        </p>
-
+<section class="about" id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2 class="section-title" style="text-align: left;">About Me</h2>
+            <h3>Digital Marketing Specialist</h3>
+            <p>I'm Karuna, a freelance digital marketer and creative designer based in Tezpur, Assam.</p>
+            <p>I help local businesses improve their online presence through strategic digital marketing, engaging content creation, and professional graphic design.</p>
+            <p>My goal is to create simple, creative, and effective digital solutions that help businesses connect with more customers online.</p>
+        </div>
+        <div class="about-image">
+            📊 Your Image Here
+        </div>
     </div>
-
 </section>
-
 
 <!-- SERVICES -->
-
 <section class="services" id="services">
-
     <h2 class="section-title">My Services</h2>
-
-    <div class="service-grid">
-
+    <p class="section-subtitle">Complete digital marketing and design solutions for your business</p>
+    
+    <div class="services-grid">
         <div class="service-card">
+            <div class="service-icon">📱</div>
             <h3>Social Media Management</h3>
-            <p>
-                Social media planning, posting and account management
-                to maintain an active online presence.
-            </p>
+            <p>Planning, posting, and account management to maintain an active online presence across all platforms.</p>
         </div>
 
         <div class="service-card">
+            <div class="service-icon">✍️</div>
             <h3>Content Creation</h3>
-            <p>
-                Creative social media posts, captions, reels and
-                promotional content for your business.
-            </p>
+            <p>Creative social media posts, captions, reels, and promotional content tailored to your audience.</p>
         </div>
 
         <div class="service-card">
+            <div class="service-icon">🎨</div>
             <h3>Graphic Design</h3>
-            <p>
-                Professional posters, flyers, banners, business cards,
-                thumbnails and promotional designs.
-            </p>
+            <p>Professional posters, flyers, banners, business cards, and promotional designs for your brand.</p>
         </div>
 
         <div class="service-card">
+            <div class="service-icon">📢</div>
             <h3>Online Advertising</h3>
-            <p>
-                Digital advertising support to help businesses reach
-                relevant audiences online.
-            </p>
+            <p>Digital advertising support to help you reach relevant audiences and grow your customer base.</p>
         </div>
 
         <div class="service-card">
+            <div class="service-icon">🌐</div>
             <h3>Website Design</h3>
-            <p>
-                Clean and responsive websites designed to present
-                your business professionally online.
-            </p>
+            <p>Clean, modern, and responsive websites designed to present your business professionally online.</p>
         </div>
 
         <div class="service-card">
-            <h3>Digital Marketing Strategy</h3>
-            <p>
-                Practical digital marketing ideas designed around
-                your business goals and target audience.
-            </p>
+            <div class="service-icon">📈</div>
+            <h3>Digital Strategy</h3>
+            <p>Practical digital marketing strategies designed around your business goals and target audience.</p>
         </div>
-
     </div>
-
 </section>
-
 
 <!-- PROCESS -->
-
-<section>
-
+<section class="process">
     <h2 class="section-title">How I Work</h2>
-
-    <div class="process">
-
-        <div class="step">
+    <p class="section-subtitle">A simple 4-step process to grow your business</p>
+    
+    <div class="process-grid">
+        <div class="process-step">
             <div class="step-number">1</div>
             <h3>Understand</h3>
-            <p>We discuss your business and goals.</p>
+            <p>We discuss your business, goals, and target audience.</p>
         </div>
 
-        <div class="step">
+        <div class="process-step">
             <div class="step-number">2</div>
             <h3>Plan</h3>
-            <p>I create a suitable digital strategy.</p>
+            <p>I create a suitable digital strategy for your business.</p>
         </div>
 
-        <div class="step">
+        <div class="process-step">
             <div class="step-number">3</div>
             <h3>Create</h3>
-            <p>I create your content and designs.</p>
+            <p>I create your content, designs, and marketing materials.</p>
         </div>
 
-        <div class="step">
+        <div class="process-step">
             <div class="step-number">4</div>
             <h3>Grow</h3>
-            <p>We improve your online presence.</p>
+            <p>We monitor results and improve your online presence.</p>
         </div>
-
     </div>
-
 </section>
-
 
 <!-- PORTFOLIO -->
-
 <section class="portfolio" id="portfolio">
-
     <h2 class="section-title">My Portfolio</h2>
-
+    <p class="section-subtitle">Recent work and projects</p>
+    
     <div class="portfolio-grid">
-
-        <div class="portfolio-item">
-            Social Media Designs
-        </div>
-
-        <div class="portfolio-item">
-            Poster & Flyer Designs
-        </div>
-
-        <div class="portfolio-item">
-            Business Branding
-        </div>
-
-        <div class="portfolio-item">
-            Website Design
-        </div>
-
-        <div class="portfolio-item">
-            Digital Advertising
-        </div>
-
-        <div class="portfolio-item">
-            Content Creation
-        </div>
-
+        <div class="portfolio-item">📸 Social Media Designs</div>
+        <div class="portfolio-item">📘 Poster & Flyer Designs</div>
+        <div class="portfolio-item">🏢 Business Branding</div>
+        <div class="portfolio-item">💻 Website Design</div>
+        <div class="portfolio-item">📊 Digital Advertising</div>
+        <div class="portfolio-item">🎬 Content Creation</div>
     </div>
-
 </section>
-
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
-
     <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-subtitle">Ready to grow your business online?</p>
 
-    <p>
-        Have a business and want to grow your online presence?
-    </p>
-
-    <p>
-        Let's discuss your requirements.
-    </p>
-
-    <p>
-        📍 Tezpur, Assam
-    </p>
-
-    <p>
-        📞
-        <a href="tel:+919101941783">
-            +91 91019 41783
-        </a>
-    </p>
-
-    <div class="contact-buttons">
-
-        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing%20for%20my%20business."
-           class="btn primary"
-           target="_blank">
-            Message Me on WhatsApp
-        </a>
-
+    <div class="contact-info">
+        <p>📍 Tezpur, Assam, India</p>
+        <p>📞 <a href="tel:+919101941783">+91 9101 941 783</a></p>
     </div>
 
+    <div class="cta-buttons">
+        <a href="https://wa.me/919101941783?text=Hi%20Karuna%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20digital%20marketing%20for%20my%20business." class="btn btn-primary" target="_blank">Message on WhatsApp</a>
+        <a href="mailto:rajputkaruna008@gmail.com" class="btn btn-primary">Send Email</a>
+    </div>
 </section>
 
-
+<!-- FOOTER -->
 <footer>
-
     © 2026 Karuna Creative. All rights reserved.
-
 </footer>
 
 </body>
